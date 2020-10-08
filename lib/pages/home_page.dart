@@ -1,14 +1,11 @@
 import 'package:confession_app_prototype/utils/post.dart';
 import 'package:confession_app_prototype/utils/user.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-import 'package:confession_app_prototype/widgets/beng_nav_bar_icon.dart';
 import 'package:confession_app_prototype/utils/beng_color.dart';
 import 'package:confession_app_prototype/widgets/confession_card.dart';
 import 'package:confession_app_prototype/widgets/beng_icon_button.dart';
-import 'package:confession_app_prototype/pages/create_posting_page.dart';
 
 class HomePage extends StatefulWidget {
   double appBarHeight = 45;
@@ -28,18 +25,32 @@ class _HomePageState extends State<HomePage> {
           'Mr.Bean',
           'assets/images/bean_profile.jpg'
       ),
+      postColor: BengColor.maximumYellowRed,
     ),
 
     Post(
-      '1',
+      '2',
       User(
-          '1',
-          'bean@example.com',
+          '2',
+          'clara@example.com',
           '12345678',
           'Clara Petacci',
           'assets/images/clara_petacci_profile.jpg'
       ),
-      postColor: Colors.cyanAccent,
+      postColor: BengColor.vividTangerine,
+    ),
+
+
+    Post(
+      '3',
+      User(
+          '3',
+          'leonardo@example.com',
+          '12345678',
+          'Leonardo Da Vinci',
+          'assets/images/leonardo_da_vinci_profile.jpg'
+      ),
+      postColor: BengColor.emerald,
     ),
   ];
 
