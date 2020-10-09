@@ -129,6 +129,7 @@ class _BengExpansionTileState extends State<BengExpansionTile> with SingleTicker
               iconColor: _iconColor.value,
               textColor: _headerColor.value,
               child: Container(
+                color: Colors.white54.withAlpha(150),
                 child: Material(
                   color: Colors.transparent,
                   child: InkWell(

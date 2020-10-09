@@ -52,6 +52,19 @@ class _HomePageState extends State<HomePage> {
       ),
       postColor: BengColor.emerald,
     ),
+
+
+    Post(
+      '4',
+      User(
+          '4',
+          'musashi@example.com',
+          '12345678',
+          'Miyamoto Musashi',
+          'assets/images/miyamoto_musashi_profile.jpg'
+      ),
+      postColor: BengColor.ceruleanCrayola,
+    ),
   ];
 
 
