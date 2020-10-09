@@ -1,3 +1,4 @@
+import 'package:confession_app_prototype/utils/beng_color.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -35,6 +36,7 @@ class _SignInPageState extends State<SignInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: BengColor.beige,
       body: Padding(
         padding: EdgeInsets.only(
           top: MediaQuery.of(context).padding.top,

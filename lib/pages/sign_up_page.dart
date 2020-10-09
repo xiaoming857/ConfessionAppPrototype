@@ -1,3 +1,4 @@
+import 'package:confession_app_prototype/utils/beng_color.dart';
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
@@ -11,6 +12,7 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: BengColor.beige,
       body: Padding(
         padding: EdgeInsets.only(
           top: MediaQuery.of(context).padding.top,
@@ -82,7 +84,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           width: 100,
                           height: 70,
                           decoration: BoxDecoration(
-                              color: Colors.blueAccent,
+                              color: BengColor.citron,
                               borderRadius: BorderRadius.horizontal(
                                 right: Radius.circular(5),
                               )
@@ -126,7 +128,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     height: 45,
                     width: 120,
                     child: RaisedButton(
-                      color: Colors.orangeAccent,
+                      color: BengColor.maximumYellowRed,
                       child: Text(
                         'Sign Up',
                         style: TextStyle(
