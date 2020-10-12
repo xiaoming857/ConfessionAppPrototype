@@ -24,6 +24,8 @@ class _ConfessionCardState extends State<ConfessionCard> {
       child: Row(
         children: [
           CircleAvatar(
+            foregroundColor: Colors.transparent,
+            backgroundColor: Colors.transparent,
             backgroundImage: AssetImage(
               widget._post.user.profilePicture,
             ),
