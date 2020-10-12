@@ -58,13 +58,12 @@ class _NotificationPageState extends State<NotificationPage> {
           ),
 
 
-          SizedBox(
-            height: 15,
-          ),
-
-
-          Text(
-            'No Notification'
+          Expanded(
+            child: Center(
+              child: Text(
+                'No Notification'
+              ),
+            ),
           ),
         ],
       ),

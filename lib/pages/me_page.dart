@@ -17,7 +17,9 @@ class _MePageState extends State<MePage> {
     return Padding(
       padding: EdgeInsets.only(
         top: MediaQuery.of(context).padding.top,
+        bottom: MediaQuery.of(context).padding.bottom,
       ),
+
       child: Column(
         children: [
           Container(
@@ -63,156 +65,157 @@ class _MePageState extends State<MePage> {
           ),
 
 
-          Expanded(
-            flex: 1,
-            child: Container(
-              decoration: BoxDecoration(
+          Container(
+            padding: EdgeInsets.only(
+              top: 15,
+              bottom: 30
+            ),
+            decoration: BoxDecoration(
                 color: BengColor.citron,
                 borderRadius: BorderRadius.vertical(
-                  bottom: Radius.circular(25)
+                    bottom: Radius.circular(25)
                 )
-              ),
+            ),
 
-              child: Material(
-                color: Colors.transparent,
-                child: Column(
-                  children: [
-                    Column(
-                      children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            InkWell(
-                              splashColor: Colors.transparent,
-                              child: Column(
-                                children: [
-                                  Text(
-                                    'Followers',
-                                    style: TextStyle(
+            child: Material(
+              color: Colors.transparent,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            child: Column(
+                              children: [
+                                Text(
+                                  'Followers',
+                                  style: TextStyle(
                                       color: Colors.white
-                                    ),
                                   ),
-
-
-                                  Text(
-                                    '100',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  )
-                                ],
-                              ),
-
-                              onTap: () {},
-                            ),
-
-
-                            CircleAvatar(
-                              radius: 50,
-                              child: Text(
-                                'XM',
-                                style: TextStyle(
-                                  fontSize: 36,
                                 ),
-                              ),
-                            ),
 
 
-                            InkWell(
-                              splashColor: Colors.transparent,
-                              child: Column(
-                                children: [
-                                  Text(
-                                    'Following',
-                                    style: TextStyle(
-                                        color: Colors.white
-                                    ),
+                                Text(
+                                  '100',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
                                   ),
-
-
-                                  Text(
-                                    '150',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 24,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  )
-                                ],
-                              ),
-
-                              onTap: () {},
+                                )
+                              ],
                             ),
-                          ],
-                        ),
+
+                            onTap: () {},
+                          ),
 
 
-                        SizedBox(
-                          height: 10,
-                        ),
+                          CircleAvatar(
+                            radius: 50,
+                            child: Text(
+                              'XM',
+                              style: TextStyle(
+                                fontSize: 36,
+                              ),
+                            ),
+                          ),
 
 
-                        Text(
-                          'Xiao Ming',
-                          style: TextStyle(
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            child: Column(
+                              children: [
+                                Text(
+                                  'Following',
+                                  style: TextStyle(
+                                      color: Colors.white
+                                  ),
+                                ),
+
+
+                                Text(
+                                  '150',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                )
+                              ],
+                            ),
+
+                            onTap: () {},
+                          ),
+                        ],
+                      ),
+
+
+                      SizedBox(
+                        height: 6,
+                      ),
+
+
+                      Text(
+                        'Xiao Ming',
+                        style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
                             color: Colors.white
-                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
+                  ),
 
 
-                    SizedBox(
-                      height: 10,
-                    ),
+                  SizedBox(
+                    height: 12,
+                  ),
 
 
-                    SizedBox(
-                      width: 130,
-                      child: InkWell(
-                        splashColor: Colors.transparent,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              'Add Description',
-                              style: TextStyle(
+                  SizedBox(
+                    width: 130,
+                    child: InkWell(
+                      splashColor: Colors.transparent,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Add Description',
+                            style: TextStyle(
                                 color: Colors.white54,
                                 decoration: TextDecoration.underline,
                                 decorationColor: Colors.white
-                              ),
                             ),
+                          ),
 
 
-                            SizedBox(
-                              width: 5,
-                            ),
+                          SizedBox(
+                            width: 5,
+                          ),
 
 
-                            Icon(
-                              MdiIcons.pencil,
-                              color: Colors.white,
-                              size: 18,
-                            )
-                          ],
-                        ),
-
-                        onTap: () {},
+                          Icon(
+                            MdiIcons.pencil,
+                            color: Colors.white,
+                            size: 18,
+                          )
+                        ],
                       ),
+
+                      onTap: () {},
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
           ),
 
 
           Expanded(
-            flex: 2,
             child: Container(
               padding: EdgeInsets.all(10),
               child: Container(
@@ -225,7 +228,7 @@ class _MePageState extends State<MePage> {
                         horizontal: 5,
                       ),
                       decoration: BoxDecoration(
-                        color: Colors.white.withAlpha(150),
+                        color: Colors.white.withAlpha(120),
                         borderRadius: BorderRadius.circular(10)
                       ),
                       child: Row(
@@ -343,10 +346,11 @@ class _MePageState extends State<MePage> {
                       thickness: 2,
                     ),
 
-                    Align (
-                      alignment: Alignment.center,
-                      child: Text(
-                        'No Post',
+                    Expanded(
+                      child: Center(
+                        child: Text(
+                          'No Post',
+                        ),
                       ),
                     ),
                   ],

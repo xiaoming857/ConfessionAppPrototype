@@ -62,6 +62,7 @@ class _PagerState extends State<Pager> {
     );
 
     return Scaffold(
+      extendBody: true,
       backgroundColor: BengColor.beige,
       floatingActionButtonLocation: FloatingActionButtonLocation.miniCenterDocked,
       floatingActionButton: FloatingActionButton(
@@ -80,6 +81,8 @@ class _PagerState extends State<Pager> {
 
 
       bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(),
+        notchMargin: 4.0,
         color: BengColor.citron,
         child: Padding(
           padding: const EdgeInsets.only(
@@ -136,8 +139,6 @@ class _PagerState extends State<Pager> {
             ),
           ),
         ),
-        shape: CircularNotchedRectangle(),
-        notchMargin: 4.0,
       ),
 
 

@@ -65,83 +65,98 @@ class _HomePageState extends State<HomePage> {
       ),
       postColor: BengColor.ceruleanCrayola,
     ),
+
+
+    Post(
+      '5',
+      User(
+          '5',
+          'yeah@example.com',
+          '12345678',
+          'Anonymous',
+          'assets/images/profile.png'
+      ),
+      postColor: BengColor.fireOpal,
+    ),
   ];
 
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(
-          height: MediaQuery.of(context).padding.top,
-        ),
+    return Padding(
+      padding: EdgeInsets.only(
+          top: MediaQuery.of(context).padding.top
+      ),
 
-        Container(
-          height: widget.appBarHeight,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: BengColor.citron,
-          ),
+      child: Column(
+        children: [
+          Container(
+            height: widget.appBarHeight,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: BengColor.citron,
+            ),
 
-          child: Material(
-            color: Colors.transparent,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                  horizontal: 15
-              ),
+            child: Material(
+              color: Colors.transparent,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 15
+                ),
 
-              child: Row(
-                children: [
-                  Text(
-                    "愉乐",
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600
+                child: Row(
+                  children: [
+                    Text(
+                      "愉乐",
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600
+                      ),
                     ),
-                  ),
 
 
-                  Expanded(
-                    child: Container(),
-                  ),
+                    Expanded(
+                      child: Container(),
+                    ),
 
 
-                  BengIconButton(
-                    icon: MdiIcons.filter,
-                    iconColor: Colors.white,
-                    onPressed: () {},
-                  ),
+                    BengIconButton(
+                      icon: MdiIcons.filter,
+                      iconColor: Colors.white,
+                      onPressed: () {},
+                    ),
 
 
-                  BengIconButton(
-                    icon: MdiIcons.magnify,
-                    iconColor: Colors.white,
-                    onPressed: () {},
-                  ),
-                ],
+                    BengIconButton(
+                      icon: MdiIcons.magnify,
+                      iconColor: Colors.white,
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
-        ),
 
 
-        Expanded(
-          child: ListView.builder(
-              padding: EdgeInsets.only(
-                  top: 5,
-                  bottom: 5
-              ),
-              itemCount: this.listViewItem.length,
-              physics: BouncingScrollPhysics(),
-              itemBuilder: (_, index) {
-                return ConfessionCard(
-                  this.listViewItem[index],
-                );
-              }
+          Expanded(
+            child: ListView.builder(
+                padding: EdgeInsets.only(
+                    top: 5,
+                    bottom: MediaQuery.of(context).padding.bottom + 5
+                ),
+                itemCount: this.listViewItem.length,
+                physics: BouncingScrollPhysics(),
+                itemBuilder: (_, index) {
+                  return ConfessionCard(
+                    this.listViewItem[index],
+                  );
+                }
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

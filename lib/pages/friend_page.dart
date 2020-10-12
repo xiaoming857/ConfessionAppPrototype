@@ -53,115 +53,119 @@ class _FriendPageState extends State<FriendPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SizedBox(
-          height: MediaQuery.of(context).padding.top,
-        ),
+    return Padding(
+      padding: EdgeInsets.only(
+        top: MediaQuery.of(context).padding.top
+      ),
 
-        Container(
-          height: widget.appBarHeight,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: BengColor.citron,
-          ),
+      child: Column(
+        children: [
+          Container(
+            height: widget.appBarHeight,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: BengColor.citron,
+            ),
 
-          child: Material(
-            color: Colors.transparent,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                  horizontal: 15
-              ),
+            child: Material(
+              color: Colors.transparent,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 15
+                ),
 
-              child: Row(
-                children: [
-                  Text(
-                    'Friends',
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600
+                child: Row(
+                  children: [
+                    Text(
+                      'Friends',
+                      style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600
+                      ),
                     ),
-                  ),
 
 
-                  Expanded(
-                    child: Container(),
-                  ),
+                    Expanded(
+                      child: Container(),
+                    ),
 
 
-                  BengIconButton(
-                    icon: Icons.person_add,
-                    iconColor: Colors.white,
-                    onPressed: () {},
-                  ),
-                ],
+                    BengIconButton(
+                      icon: Icons.person_add,
+                      iconColor: Colors.white,
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
-        ),
 
 
-        Expanded(
-          child: ListView.builder(
-            padding: EdgeInsets.zero,
-            itemCount: items.length,
-            physics: BouncingScrollPhysics(),
-            itemBuilder: (_, int index) {
-              return BengExpansionTile(
-                tilePadding: EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 6
-                ),
-                childrenPadding: EdgeInsets.zero,
-                initiallyExpanded: items[index].initialExpanded,
-                title: Text(
-                  items[index].headerValue
-                ),
+          Expanded(
+            child: ListView.builder(
+              padding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).padding.bottom,
+              ),
+              itemCount: items.length,
+              physics: BouncingScrollPhysics(),
+              itemBuilder: (_, int index) {
+                return BengExpansionTile(
+                  tilePadding: EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 6
+                  ),
+                  childrenPadding: EdgeInsets.zero,
+                  initiallyExpanded: items[index].initialExpanded,
+                  title: Text(
+                    items[index].headerValue
+                  ),
 
-                children: [
-                  for (String i in items[index].expandedValue)
-                    Container(
-                      child: InkWell(
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(
-                            vertical: 8,
-                            horizontal: 10
-                          ),
-                          child: Row(
-                            children: [
-                              CircleAvatar(
-                                child: Text(
-                                  items[index].headerValue.characters.first,
+                  children: [
+                    for (String i in items[index].expandedValue)
+                      Container(
+                        child: InkWell(
+                          child: Padding(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 8,
+                              horizontal: 10
+                            ),
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  child: Text(
+                                    items[index].headerValue.characters.first,
+                                  ),
                                 ),
-                              ),
 
 
-                              SizedBox(
-                                width: 10,
-                              ),
+                                SizedBox(
+                                  width: 10,
+                                ),
 
 
-                              Text(
-                                i
-                              ),
-                            ],
+                                Text(
+                                  i
+                                ),
+                              ],
+                            ),
                           ),
+
+                          onTap: () {},
                         ),
+                      )
+                  ],
 
-                        onTap: () {},
-                      ),
-                    )
-                ],
-
-                onExpansionChanged: (bool isExpanded) {
-                  print('$index, $isExpanded');
-                },
-              );
-            }
+                  onExpansionChanged: (bool isExpanded) {
+                    print('$index, $isExpanded');
+                  },
+                );
+              }
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

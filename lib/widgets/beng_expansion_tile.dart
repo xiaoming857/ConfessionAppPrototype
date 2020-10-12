@@ -1,3 +1,4 @@
+import 'package:confession_app_prototype/utils/beng_color.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -129,7 +130,7 @@ class _BengExpansionTileState extends State<BengExpansionTile> with SingleTicker
               iconColor: _iconColor.value,
               textColor: _headerColor.value,
               child: Container(
-                color: Colors.white54.withAlpha(150),
+                color: Colors.grey.withAlpha(75),
                 child: Material(
                   color: Colors.transparent,
                   child: InkWell(
