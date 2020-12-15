@@ -1,6 +1,6 @@
-# confession_app_prototype
+# confeal_prototype_test
 
-A prototype for confession application using Flutter.
+A testing app for confeal prototype.
 
 ## Getting Started
 
